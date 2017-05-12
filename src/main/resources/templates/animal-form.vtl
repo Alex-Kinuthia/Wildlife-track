@@ -1,0 +1,30 @@
+<h1>Bienvenue peeps!</h1>
+<p>Add a new Animal:</p>
+
+
+<form action="animal/new" method="post">
+<label>Name</label>
+<input id="name" name="name" type="text">
+
+<label>Is the Animal Endangered?</label>
+  <input type="checkbox" name="endangered">
+
+  <h2>Endangered Animals:</h2>
+
+  <label>Health</label>
+  <select name="health">
+    <option>Very Ill</option>
+    <option>Okay</option>
+    <option>Healthy</option>
+  </select>
+
+  <label>Age of Animal</label>
+  <select name="age">
+    <option>Newborn Animal</option>
+    <option>Young Animal</option>
+    <option>Adult Animal</option>
+  </select>
+
+  <button type="submit" class="btn btn-success">Add Animal</button>
+
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AnimalTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-05-11T11:55:39" hostname="alex-Lenovo-ideapad-110-15IBR" time="0.432">
+  <properties/>
+  <testcase name="find_returnsNullWhenNoAnimalFound_null" classname="AnimalTest" time="0.036"/>
+  <testcase name="animal_instantiatesCorrectly_false" classname="AnimalTest" time="0.016"/>
+  <testcase name="getName_animalInstantiatesWithName_Deer" classname="AnimalTest" time="0.03"/>
+  <testcase name="save_assignsIdToObjectAndSavesObjectToDatabase" classname="AnimalTest" time="0.056"/>
+  <testcase name="equals_returnsTrueIfNameIsTheSame_false" classname="AnimalTest" time="0.014"/>
+  <testcase name="delete_deletesAnimalFromDatabase_0" classname="AnimalTest" time="0.087"/>
+  <testcase name="all_returnsAllInstancesOfAnimal_false" classname="AnimalTest" time="0.102"/>
+  <testcase name="find_returnsAnimalWithSameId_secondAnimal" classname="AnimalTest" time="0.08"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
