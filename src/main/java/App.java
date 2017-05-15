@@ -12,6 +12,7 @@ public class App {
   public static void main(String[] args) {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
+<<<<<<< HEAD
     ProcessBuilder process = new ProcessBuilder();
     Integer port;
     if (process.environment().get("PORT") !=null) {
@@ -26,13 +27,34 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+=======
+
+    get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
       // model.put("animals", Animal.all());
       // model.put("endangeredAnimals", EndangeredAnimal.all());
       // model.put("sightings", Sighting.all());
+>>>>>>> 14ee1378a3f7363d94e4eb4cea82b659d16e5bb1
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
+<<<<<<< HEAD
+
+        get("/contact", (request, response) -> {
+          Map<String, Object> model = new HashMap<String, Object>();
+          model.put("template", "templates/contact.vtl");
+          return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+    get("/animal/new", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("animals", Animal.all());
+      model.put("endangeredAnimals", EndangeredAnimal.all());
+      model.put("template", "templates/animal-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+=======
     get("/animal/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("animals", Animal.all());
@@ -60,15 +82,8 @@ post("/animal/new", (request, response) -> {
     endangeredAnimal.save();
     model.put("animals", Animal.all());
     model.put("endangeredAnimals", EndangeredAnimal.all());
-  } else {
-    String name = request.queryParams("name");
-    Animal animal = new Animal(name);
-    animal.save();
-    model.put("animals", Animal.all());
-    model.put("endangeredAnimals", EndangeredAnimal.all());
-  }
-  response.redirect("/");
-    return null;
-  });
+    };
+});
+>>>>>>> 14ee1378a3f7363d94e4eb4cea82b659d16e5bb1
 }
 }
